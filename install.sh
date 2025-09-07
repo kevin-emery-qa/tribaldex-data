@@ -1,0 +1,26 @@
+python3 -m pip install attrs
+python3 -m pip install certifi
+python3 -m pip install charset-normalizer
+python3 -m pip install execnet
+python3 -m pip install greenlet
+python3 -m pip install idna
+python3 -m pip install iniconfig
+python3 -m pip install packaging
+python3 -m pip install playwright
+python3 -m pip install pluggy
+python3 -m pip install py
+python3 -m pip install pyee
+python3 -m pip install pyparsing
+python3 -m pip install pytest
+python3 -m pip install pytest-base-url
+python3 -m pip install pytest-forked
+python3 -m pip install pytest-playwrigh
+python3 -m pip install pytest-xdist
+python3 -m pip install python-slugify
+python3 -m pip install requests
+python3 -m pip install text-unidecode
+python3 -m pip install toml
+python3 -m pip install tomli
+python3 -m pip install urllib3
+python3 -m pip install websockets
+pip install --upgrade pytest

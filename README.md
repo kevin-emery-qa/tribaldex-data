@@ -1,3 +1,9 @@
+A python3 utility to pull financial data from tribaldex.com
+USAGE:
+
+./install.sh  # beware this installs more libraries than the project actually needs.  If you want to keep your python environment clean, install them one-by-one as you see the project needs them
+PWDEBUG=1 pytest tests/test_search.py
+
 Taken from Playwright starter code for Python at https://github.com/AutomationPanda
 
 This project is intended to pull financial data from tribaldex.com.  Some code here is unnecessary; the back-end code is in place in case we need to pull directly from the API instead of the website
