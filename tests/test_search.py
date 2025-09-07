@@ -12,7 +12,6 @@ CRYPTOS = [
     'CTP'
 ]
 
-
 @pytest.mark.parametrize('phrase', CRYPTOS)
 def test_basic_ctp_load(
     phrase: str,
@@ -20,8 +19,8 @@ def test_basic_ctp_load(
     search_page: CtpPage,
     ticker) -> None:
     
-    # Given the Tribaldex CTP home page is displayed
+    # Given the Tribaldex home page is displayed
     search_page.load(ticker)
 
-    # When the user searches for a phrase (currently just pauses)
+    # The user saves json data for elasticsearch time series
     search_page.pull_data(phrase, ticker)

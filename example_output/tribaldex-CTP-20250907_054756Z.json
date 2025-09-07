@@ -1,0 +1,32 @@
+{
+    "@timestamp": "2025-09-07T05:47:56Z",
+    "ecs.version": "9.1.3",
+    "host.name": "willman-enterprises",
+    "agent": {
+        "id": "tribaldex-bot",
+        "name": "tribaldex-bot",
+        "type": "elastic-agent"
+    },
+    "data_stream": {
+        "dataset": "cryptocurrency.metrics",
+        "namespace": "tribaldex-ui",
+        "type": "metrics"
+    },
+    "ticker": "CTP",
+    "prices": [
+        "volume_hive0.55606636",
+        "24hr_usd$0.0000000",
+        "bid_usd$0.0000253",
+        "last_hive0.00012575",
+        "last_usd$0.0000253",
+        "ask_usd$0.0000255",
+        "volume_usd$0.1118822",
+        "bid_hive0.00012575",
+        "ask_hive0.00012681",
+        "24hr_hive0"
+    ],
+    "event": {
+        "dataset": "cryptocurrency.metrics",
+        "kind": "metric"
+    }
+}
