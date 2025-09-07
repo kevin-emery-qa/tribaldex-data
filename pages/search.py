@@ -10,7 +10,6 @@ class CtpPage:
 
     def __init__(self, page: Page) -> None:
         self.page = page
-        self.chratview = page.locator('div.vue-apexcharts')
         self.lastHive = page.locator('.font-bold:has-text("Last") + p')
         self.lastDollar = page.locator('.font-bold:has-text("Last") + p + p[class*="text-gray"]')
         self.twentyFourHive = page.locator('.font-bold:has-text("24H") + p')
@@ -25,8 +24,18 @@ class CtpPage:
     def load(self, ticker) -> None:
         self.page.goto(self.BASE_URL + ticker)
     
-    def pull_data(self, phrase: str) -> None:
-        self.page.pause()
+    def pull_data(self, phrase: str, ticker) -> None:
+        print("ticker: " + ticker)
+        print("last (hive): " + self.lastHive.text_content())
+        print("last (USD) : " + self.lastDollar.text_content())
+        print("24hr (hive): " + self.twentyFourHive.text_content())
+        print("24hr (USD) : " + self.twentyFourDollar.text_content())
+        print("ask (hive) : " + self.askHive.text_content())
+        print("ask (USD)  : " + self.askDollar.text_content())
+        print("bid (hive) : " + self.bidHive.text_content())
+        print("bid (USD)  : " + self.bidDollar.text_content())
+        print("vol (hive) : " + self.volumeHive.text_content())
+        print("vol (USD)  : " + self.volumeDollar.text_content())
 
     @pytest.fixture(scope="session", autouse=True)
     def ticker(pytestconfig):

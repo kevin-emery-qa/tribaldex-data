@@ -24,4 +24,4 @@ def test_basic_ctp_load(
     search_page.load(ticker)
 
     # When the user searches for a phrase (currently just pauses)
-    search_page.pull_data(phrase)
+    search_page.pull_data(phrase, ticker)

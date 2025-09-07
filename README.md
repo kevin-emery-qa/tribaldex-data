@@ -1,15 +1,17 @@
 A python3 utility to pull financial data from tribaldex.com
-INSTALLATION:
+
+# INSTALLATION:
 requires python 3; developed with 3.13.7
+
 ./install.sh  # beware this installs more libraries than the project actually needs.  If you want to keep your python environment clean, install them one-by-one as you see the project needs them
 
-USAGE:
+# USAGE:
 
 # specify any tribaldex ticker with --ticker
-pytest tests/test_search.py --ticker CTP
+pytest -s tests/test_search.py --ticker CTP
 
 # use PWDEBUG=1 to see what it is doing (hit the play button in playwright explorer to start)
-PWDEBUG=1 pytest tests/test_search.py --ticker CTP 
+PWDEBUG=1 pytest -s tests/test_search.py --ticker CTP 
 
 Taken from Playwright starter code for Python at https://github.com/AutomationPanda
 
