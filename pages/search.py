@@ -22,12 +22,12 @@ class CtpPage:
         self.volumeHive = page.locator('.font-bold:has-text("Volume") + p')
         self.volumeDollar = page.locator('.font-bold:has-text("Volume") + p + p[class*="text-gray"]')
     
-    def load(self) -> None:
-        self.page.goto(self.BASE_URL)
+    def load(self, ticker) -> None:
+        self.page.goto(self.BASE_URL + ticker)
     
-    def search(self, phrase: str) -> None:
+    def pull_data(self, phrase: str) -> None:
         self.page.pause()
 
-    @pytest.fixture
-    def ticker():
-        return "C"
+    @pytest.fixture(scope="session", autouse=True)
+    def ticker(pytestconfig):
+        return pytestconfig.getoption("ticker")
